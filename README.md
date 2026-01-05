@@ -1,39 +1,94 @@
 # rebo (repo bootstrap + repo utilities)
 
-A small, practical CLI that helps you:
-- **init**: bootstrap a new repo from templates (py-lib / node-lib / c-lib / minimal)
-- **doctor**: check repo hygiene (and optionally auto-fix missing basics)
-- **md2pdf**: convert Markdown to a clean PDF (subset of Markdown, no external tools)
-- **jsondiff**: structural diff for JSON files (text / json / html output)
-- **index**: generate a command index (Makefile / package.json scripts / common scripts)
+# rebo — Lightweight repo bootstrap & hygiene toolkit
 
-## Install (dev / editable)
+⚡ rebo is a developer-oriented CLI tool that helps you **bootstrap new repositories quickly** and **automatically check /补 fill documentation, CI, and project structure hygiene**.
+
+It supports project scaffolding (Python / Node / C), repo checks, JSON structural diffing, Markdown → PDF conversion, and automatic command indexing — all in one small utility.
+
+---
+
+## ✨ Features
+
+- **`rebo init` — Project scaffolding generator**
+  - Profiles: `py-lib`, `node-lib`, `c-lib`, `minimal`
+  - Generates README / LICENSE / .gitignore / tests / CI skeletons
+
+- **`rebo doctor` — Repo hygiene checker & auto-fix**
+  - Detects missing essential / recommended files
+  - `--fix` generates placeholder docs automatically
+
+- **`rebo md2pdf` — Markdown → PDF (subset, no external tools)**
+  - Supports headings, lists, fenced code blocks
+
+- **`rebo jsondiff` — Structural JSON diff**
+  - Outputs `text`, `json`, or `html` reports
+
+- **`rebo index` — Auto-generate command index**
+  - Scans Makefile / npm scripts / pyproject entries
+  - Creates `COMMANDS.md` and can link it from README
+
+---
+
+## 🚀 Quickstart
 
 ```bash
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux:
-#   source .venv/bin/activate
-pip install -e ".[dev]"
-```
-
-## Quickstart
-
-```bash
+pip install -e .
 rebo --help
-rebo init my-lib --profile py-lib --author "Your Name" --email "you@example.com" --github-user "your-id" --with-ci
-rebo doctor my-lib
-rebo doctor my-lib --fix
-rebo md2pdf README.md out.pdf
-rebo jsondiff old.json new.json --format html --out diff.html
-rebo index .
 ```
+## Create a Python library skeleton
+```bash
+rebo init my-lib --profile py-lib --with-ci
+```
+## Check repo hygiene
+```bash
+cd my-lib
+rebo doctor .
+rebo doctor . --fix
+```
+## JSON diff
+```bash
+rebo jsondiff examples/old.json examples/new.json --format html --out diff.html
+```
+## Markdown → PDF
+```bash
+rebo md2pdf examples/sample.md out.pdf
+```
+## 🧩 Commands
+```bash
+rebo init      # project bootstrap
+rebo doctor    # hygiene check / autofix
+rebo md2pdf    # markdown → pdf
+rebo jsondiff  # structured json diff
+rebo index     # generate COMMANDS.md
+```
+## 📦 Profiles (for rebo init)
+| Profile    | Description                     |
+| ---------- | ------------------------------- |
+| `minimal`  | README + .gitignore             |
+| `py-lib`   | pyproject + src + tests + CI    |
+| `node-lib` | package.json + src + tests + CI |
+| `c-lib`    | Makefile + src(.c/.h) + CI      |
 
-## Why this exists
+## 🛠 Roadmap
 
-A lot of GitHub repos look "empty" to strangers because they don't have a quick button to press.
-This tool tries to create that button.
+- Additional templates (react-app, py-cli)
 
-## License
+- Extensible doctor plugin system
 
-MIT
+- md2pdf image & table support
+
+- jsondiff ignore-path / threshold options
+
+- Template customization flags
+
+---
+## 🤝 Contributing
+
+PRs and Issues are welcome 🙂
+You can start by running rebo doctor --fix to generate recommended project docs.
+---
+## 📜 License
+
+MIT License
+
