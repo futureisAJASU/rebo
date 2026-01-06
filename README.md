@@ -1,5 +1,5 @@
 # rebo (repo bootstrap + repo utilities) introduction
-(아래에 한국어 설명 있습니다!,including Korean introduction below!)
+(아래에 한국어 설명 있습니다! | including Korean introduction below!)
 
 # rebo — Lightweight repo bootstrap & hygiene toolkit
 
