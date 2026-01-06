@@ -1,4 +1,5 @@
-# rebo (repo bootstrap + repo utilities)
+# rebo (repo bootstrap + repo utilities) introduction
+(아래에 한국어 설명 있습니다!,including Korean introduction below!)
 
 # rebo — Lightweight repo bootstrap & hygiene toolkit
 
@@ -92,8 +93,9 @@ You can start by running rebo doctor --fix to generate recommended project docs.
 
 MIT License   
 
+---
 
-🇰🇷 rebo — 가벼운 레포 부트스트랩 & 위생 점검 툴
+# 🇰🇷 rebo — 가벼운 레포 부트스트랩 & 위생 점검 툴
 
 ⚡ rebo는 새 레포를 빠르게 생성하고, 문서 / CI / 구조 상태를 자동 점검·보완해 주는 개발자용 CLI 도구입니다.
 Python / Node / C 프로젝트 템플릿 생성부터, 레포 위생 진단, JSON 구조 비교, Markdown→PDF 변환까지 한 번에 제공합니다.
