@@ -3,8 +3,8 @@
 
 # rebo — Lightweight repo bootstrap & hygiene toolkit
 
-![PyPI version](https://img.shields.io/pypi/v/rebo)
-![Downloads](https://img.shields.io/pypi/dm/rebo)
+[![PyPI version](https://img.shields.io/pypi/v/rebo-toolkit)](https://pypi.org/project/rebo-toolkit/)
+![Downloads](https://img.shields.io/pypi/dm/rebo-toolkit)
 ![License](https://img.shields.io/github/license/futureisAJASU/rebo)
 
 ⚡ rebo is a developer-oriented CLI tool that helps you **bootstrap new repositories quickly** and **automatically check /补 fill documentation, CI, and project structure hygiene**.
